@@ -180,12 +180,3 @@ footer a:hover {
     font-size: 0.7rem;
   }
 }
-
-@media (max-width: 480px) {
-  fieldset {
-    padding: 0.8rem;
-  }
-  legend {
-    font-size: 1rem;
-  }
-}
