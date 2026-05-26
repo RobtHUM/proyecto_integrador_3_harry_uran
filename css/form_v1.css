@@ -1,0 +1,135 @@
+:root {
+    --bg-abyss: #0a0a0a;
+    --gold-vintage: #d4af37;
+    --crimson-blood: #c0392b;
+    --neon-rose: #ff69b4;
+    --cream-text: #f0e6d3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-abyss);
+    color: var(--cream-text);
+    font-family: 'Courier Prime', monospace;
+    line-height: 1.5;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--gold-vintage);
+  z-index: 10;
+}
+
+.header-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--gold-vintage), #f5e2b0);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--cream-text);
+  font-weight: bold;
+  transition: 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.2rem;
+}
+
+nav a:hover {
+  color: var(--gold-vintage);
+  border-bottom-color: var(--neon-rose);
+}
+
+/* Estilos formulario */
+fieldset {
+    border: 2px solid var(--gold-vintage);
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+legend {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--neon-rose);
+    padding: 0 0.5rem;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    color: var(--cream-text);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--gold-vintage);
+    background: transparent;
+    color: var(--cream-text);
+}
+
+input[type="submit"] {
+    background: var(--gold-vintage);
+    color: #0a0a0a;
+    border: none;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+input[type="submit"]:hover {
+    background: var(--neon-rose);
+    color: #0a0a0a;
+    box-shadow: 0 0 12px var(--neon-rose);
+}
+
+/*Pie de página*/
+footer {
+  background: #030303;
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.8rem;
+  border-top: 2px solid var(--crimson-blood);
+  margin-top: 2rem;
+}
+
+footer a {
+  color: var(--gold-vintage);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
