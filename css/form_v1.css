@@ -135,6 +135,8 @@ footer a:hover {
 }
 
 /* Responsive Design */
+/* Añade al final del archivo form_v1.css */
+
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
@@ -143,7 +145,47 @@ footer a:hover {
   }
 
   nav ul {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
+  }
+
+  main h1 {
+    font-size: 1.5rem;
+    margin: 1rem 1rem !important;
+  }
+
+  fieldset {
+    margin: 1rem;
+    padding: 1rem;
+    max-width: none; /* permite que ocupe todo el ancho disponible */
+    width: calc(100% - 2rem);
+  }
+
+  legend {
+    font-size: 1.2rem;
+  }
+
+  label, input, textarea {
+    font-size: 0.9rem;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+  }
+
+  footer {
+    padding: 1.5rem;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  fieldset {
+    padding: 0.8rem;
+  }
+  legend {
+    font-size: 1rem;
   }
 }
