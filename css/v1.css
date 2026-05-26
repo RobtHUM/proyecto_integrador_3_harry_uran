@@ -1,0 +1,260 @@
+/* ---------- VARIABLES ---------- */
+:root {
+  --bg-abyss: #0a0a0a;
+  --gold-vintage: #d4af37;
+  --crimson-blood: #c0392b;
+  --neon-rose: #ff69b4;
+  --cream-text: #f0e6d3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-abyss);
+  color: var(--cream-text);
+  font-family: 'Courier Prime', monospace;
+  line-height: 1.5;
+}
+
+/*Encabezado de la página*/
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 2px solid var(--gold-vintage);
+  z-index: 10;
+}
+
+.header-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--gold-vintage), #f5e2b0);
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--cream-text);
+  font-weight: bold;
+  transition: 0.2s;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 0.2rem;
+}
+
+nav a:hover {
+  color: var(--gold-vintage);
+  border-bottom-color: var(--neon-rose);
+}
+
+/*HERO Section principal */
+.hero {
+  max-width: 1300px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-poster {
+  flex: 1;
+  aspect-ratio: 4 / 3;
+  background: #2a2418;
+  border: 4px double var(--gold-vintage);
+  box-shadow: 8px 12px 20px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--gold-vintage);
+  background-image: linear-gradient(45deg, #1f1a0e, #0f0c05);
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--gold-vintage), #e6c87a);
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  border-left: 4px solid var(--crimson-blood);
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid var(--gold-vintage);
+  padding: 0.7rem 1.8rem;
+  color: var(--gold-vintage);
+  font-family: 'Courier Prime', monospace;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: var(--neon-rose);
+  border-color: var(--neon-rose);
+  color: #0a0a0a;
+  box-shadow: 0 0 12px var(--neon-rose);
+}
+
+/*CARTELERA*/
+.cartelera {
+  max-width: 1300px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+}
+
+.cartelera h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--gold-vintage);
+}
+
+.peliculas-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.peliculas-list li {
+  background: #11100c;
+  border: 2px double var(--gold-vintage);
+  transition: 0.2s;
+}
+
+.peliculas-list li:hover {
+  transform: translateY(-6px);
+  border-color: var(--neon-rose);
+  box-shadow: 0 0 15px var(--neon-rose);
+}
+
+article {
+  padding: 1rem;
+}
+
+.poster-placeholder {
+  background: #1e1a10;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  color: #b89a6b;
+  border-bottom: 3px solid var(--crimson-blood);
+  margin-bottom: 1rem;
+}
+
+article h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: var(--gold-vintage);
+  margin-bottom: 0.5rem;
+}
+
+article p {
+  color: #d4c2a5;
+}
+
+time {
+  color: var(--neon-rose);
+  font-weight: bold;
+}
+
+/*NOSOTROS y CONTACTO*/
+.info-wrapper {
+  max-width: 1300px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  border-top: 1px dashed var(--crimson-blood);
+  padding-top: 3rem;
+}
+
+.about, .contact {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1.8rem;
+  border-left: 4px solid var(--gold-vintage);
+}
+
+.about h2, .contact h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--neon-rose);
+  display: inline-block;
+}
+
+.contact a {
+  color: var(--gold-vintage);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/*Pie de página*/
+footer {
+  background: #030303;
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Courier Prime', monospace;
+  font-size: 0.8rem;
+  border-top: 2px solid var(--crimson-blood);
+  margin-top: 2rem;
+}
+
+footer a {
+  color: var(--gold-vintage);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
